@@ -1,9 +1,14 @@
-import { Flex, HStack, Icon, VStack } from '@chakra-ui/react';
+import { Box, Flex, HStack, Icon, VStack } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 
-export const IconWithUnderline = () => {
+type Props = {
+  icon: IconType;
+};
+
+export const IconWithUnderline = ({ icon }: Props) => {
   return (
-    <Flex>
-      <Icon></Icon>
+    <Flex borderBottom={"2px solid blue"}>
+      <Icon marginY="auto" marginX={10} as={icon} fontSize={["3xl"]}></Icon>
     </Flex>
   );
 };
