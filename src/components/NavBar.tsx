@@ -1,21 +1,22 @@
-import { Flex, HStack, Icon, VStack } from "@chakra-ui/react";
-import { SearchBar } from "./SearchBar";
-import { IconWithUnderline } from "./IconWithUnderline";
+import { Flex, HStack, Icon } from "@chakra-ui/react";
 import { BsFacebook, BsFillHouseFill, BsFillPeopleFill } from "react-icons/bs";
-import { ImPlay } from "react-icons/im";
 import { CiShop } from "react-icons/ci";
+import { ImPlay } from "react-icons/im";
 import { IoPeopleCircleOutline } from "react-icons/io5";
+import { IconWithUnderline } from "./IconWithUnderline";
+import { SearchBar } from "./SearchBar";
 
 export const NavBar = () => {
   return (
     <HStack
       position="fixed"
+      zIndex={50}
       top={0}
       left={0}
       width={"100%"}
       height="5%"
       justifyContent={"space-between"}
-      backgroundColor={"blackAlpha.800"}
+      backgroundColor={"blue.700"}
     >
       <Flex justifySelf={"left"} marginX={1}>
         <Icon fontSize={"4xl"} as={BsFacebook}></Icon>
