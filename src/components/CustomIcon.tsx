@@ -1,24 +1,15 @@
-import {
-  Box,
-  Flex,
-  FlexProps,
-  HStack,
-  Icon,
-  IconProps,
-  VStack,
-} from '@chakra-ui/react';
+import { Flex, FlexProps, Icon, IconProps } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
-export type CustomIconProps = {
+export type CustomIconProps = IconProps & {
   icon: IconType;
   flexProps?: FlexProps;
-  iconProps?: IconProps;
 };
 
-export const CustomIcon = ({ icon, flexProps, iconProps }: CustomIconProps) => {
+export const CustomIcon = ({ icon, flexProps, ...rest }: CustomIconProps) => {
   return (
-    <Flex {...flexProps}>
-      <Icon as={icon} {...iconProps}></Icon>
+    <Flex _hover={{ bgColor: 'blue.200', borderRadius: 2 }} {...flexProps}>
+      <Icon as={icon} fontSize='4xl' {...rest}></Icon>
     </Flex>
   );
 };

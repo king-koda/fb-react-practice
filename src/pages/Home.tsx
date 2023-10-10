@@ -1,17 +1,15 @@
-import { Box, Flex, HStack, Text, VStack } from '@chakra-ui/react';
-import { NavBar } from '../components/NavBar';
-import { useCallback } from 'react';
+import { HStack, Text } from '@chakra-ui/react';
 
-export const Home = () => {
+type Props = {
+  title: string;
+};
+
+export const Home = ({ title }: Props) => {
   return (
     <>
-      {/* <NavBar></NavBar> */}
-      {/* <HStack bgColor={"blue"} height="2000px">
-        <Text>HOME</Text>
-        <LeftSidebar></LeftSidebar>
-        <MainContent></MainContent>
-        <RightSidebar></RightSidebar>
-      </HStack> */}
+      <HStack height='full' flex='auto' borderX='black 2px solid'>
+        <Text>{title}</Text>
+      </HStack>
     </>
   );
 };

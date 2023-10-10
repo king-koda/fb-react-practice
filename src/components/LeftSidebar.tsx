@@ -1,17 +1,11 @@
-import { Box, Flex, HStack, Icon, VStack } from "@chakra-ui/react";
-import { IconType } from "react-icons";
+import { Flex, Text } from '@chakra-ui/react';
 
 type Props = {};
 
 export const LeftSidebar = ({}: Props) => {
   return (
-    <Flex
-      bgColor={"yellow"}
-      width="20%"
-      borderRight={"2px solid blue"}
-      height={"2000px"}
-      position="fixed"
-      left="0"
-    ></Flex>
+    <Flex className='sidebar' height={'2000px'}>
+      <Text>hello</Text>
+    </Flex>
   );
 };
