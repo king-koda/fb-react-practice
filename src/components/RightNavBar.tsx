@@ -4,7 +4,7 @@ import { CustomIcon } from './CustomIcon';
 
 export const RightNavBar = () => {
   return (
-    <Flex className='outerNav' flexDirection={'row-reverse'} flex='auto'>
+    <Flex className='outerNav' justifyContent={'flex-end'} flex='auto'>
       <CustomIcon icon={BsFacebook} />
       <CustomIcon icon={BsFacebook} />
       <CustomIcon icon={BsFacebook} />

@@ -7,7 +7,7 @@ import { RightNavBar } from './RightNavBar';
 export const NavBar = () => {
   const showFullNav = useMediaQuery({ minWidth: 700 });
   return (
-    <HStack position='relative' backgroundColor={'blue.700'} gap={undefined}>
+    <HStack backgroundColor={'blue.700'}>
       <LeftNavBar />
       {showFullNav && <MidNavBar />}
       <RightNavBar />

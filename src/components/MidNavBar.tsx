@@ -7,7 +7,7 @@ import { IconWithUnderline } from './IconWithUnderline';
 
 export const MidNavBar = () => {
   return (
-    <Flex justifyContent={'space-between'} flex='auto'>
+    <Flex justifyContent={'space-between'} flex='auto' width='60%'>
       <IconWithUnderline
         icon={BsFillHouseFill}
         pageType={'HOME'}
