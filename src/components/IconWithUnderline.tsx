@@ -13,9 +13,12 @@ export const IconWithUnderline = ({ pageType, flexProps, ...rest }: Props) => {
     <CustomIcon
       {...rest}
       flexProps={{
-        borderBottom: isSelected ? '2px solid blue' : undefined,
+        borderBottom: isSelected ? '4px solid blue' : undefined,
+        bgColor: undefined,
+        borderRadius: undefined,
         ...flexProps,
       }}
+      color={isSelected ? 'blue' : 'gray.500'}
       marginX='3'
       onClick={() => navigate(PageRoutes[pageType])}
     ></CustomIcon>

@@ -16,6 +16,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.nav {
+  background-color: #242224;
+  border-bottom: gray 1px solid;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
 .outerNav {
   width: 20%;
 }

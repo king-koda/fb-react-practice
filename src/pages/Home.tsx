@@ -7,7 +7,12 @@ type Props = {
 export const Home = ({ title }: Props) => {
   return (
     <>
-      <HStack height='full' flex='auto' borderX='black 2px solid'>
+      <HStack
+        height='full'
+        flex='auto'
+        borderX='black 2px solid'
+        marginX={['10%', '10%', '0%']}
+      >
         <Text>{title}</Text>
       </HStack>
     </>

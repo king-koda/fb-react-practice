@@ -8,8 +8,12 @@ export type CustomIconProps = IconProps & {
 
 export const CustomIcon = ({ icon, flexProps, ...rest }: CustomIconProps) => {
   return (
-    <Flex _hover={{ bgColor: 'blue.200', borderRadius: 2 }} {...flexProps}>
-      <Icon as={icon} fontSize='4xl' {...rest}></Icon>
+    <Flex
+      _hover={{ bgColor: 'gray.600', borderRadius: 90, cursor: 'pointer' }}
+      borderRadius={'90'}
+      {...flexProps}
+    >
+      <Icon as={icon} fontSize='4xl' color='gray.500' {...rest}></Icon>
     </Flex>
   );
 };
