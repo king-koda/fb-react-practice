@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { CustomIcon, CustomIconProps } from './CustomIcon';
-import { PageRoutes, PageTypes } from '../pages/Pages';
+import { PageRoutes } from '../lib/enums';
+import { PageTypes } from '../lib/types';
 
 type Props = CustomIconProps & {
   pageType: PageTypes;

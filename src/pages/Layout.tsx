@@ -6,7 +6,7 @@ import { NavBar } from '../components/NavBar';
 import { RightSidebar } from '../components/RightSidebar';
 
 export const Layout = () => {
-  const collapseSideBars = useMediaQuery({ maxWidth: 700 });
+  const collapseSideBars = false; //useMediaQuery({ maxWidth: 700 });
 
   return (
     <>

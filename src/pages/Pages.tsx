@@ -2,21 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './Home';
 import { Layout } from './Layout';
 
-export type PageTypes =
-  | 'HOME'
-  | 'FRIENDS'
-  | 'VIDEOS'
-  | 'MARKETPLACE'
-  | 'GROUPS';
-
-export enum PageRoutes {
-  HOME = '/',
-  FRIENDS = '/friends',
-  VIDEOS = '/videos',
-  MARKETPLACE = '/marketplace',
-  GROUPS = '/groups',
-}
-
 export const Pages = () => {
   return (
     <BrowserRouter>

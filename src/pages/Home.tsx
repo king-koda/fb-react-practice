@@ -1,4 +1,5 @@
-import { HStack, Text } from '@chakra-ui/react';
+import { Flex, HStack, Text, VStack } from '@chakra-ui/react';
+import { Stories } from '../components/Stories';
 
 type Props = {
   title: string;
@@ -7,14 +8,19 @@ type Props = {
 export const Home = ({ title }: Props) => {
   return (
     <>
-      <HStack
+      <VStack
         height='full'
         flex='auto'
         borderX='black 2px solid'
         marginX={['10%', '10%', '0%']}
+        width={'full'}
+        className='main'
       >
-        <Text>{title}</Text>
-      </HStack>
+        <Stories />
+
+        {/* <NewPost />
+        <Feed /> */}
+      </VStack>
     </>
   );
 };
