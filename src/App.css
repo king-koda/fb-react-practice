@@ -52,7 +52,12 @@
   -ms-overflow-style: none; /* IE 10+ */
 }
 
-.story {
+video:hover {
+  transform: scale(1.1);
+}
+
+.story,
+.profile-icon {
   user-select: none;
 }
 
@@ -117,6 +122,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }

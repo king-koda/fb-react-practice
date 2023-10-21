@@ -3,7 +3,7 @@ import { BsFillHouseFill, BsFillPeopleFill } from 'react-icons/bs';
 import { FaShop } from 'react-icons/fa6';
 import { ImPlay } from 'react-icons/im';
 import { IoPeopleCircleOutline } from 'react-icons/io5';
-import { IconWithUnderline } from './IconWithUnderline';
+import { IconWithUnderline } from '../icons/IconWithUnderline';
 
 export const MidNavBar = () => {
   return (

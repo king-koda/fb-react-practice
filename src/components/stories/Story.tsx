@@ -1,0 +1,136 @@
+import { Flex, Text } from '@chakra-ui/react';
+import { useRef, useState } from 'react';
+import { StoryType } from '../../lib/types';
+import { ProfileIcon } from '../profile/ProfileIcon';
+import { StoryImagePreview } from './StoryImagePreview';
+import { CustomIcon } from '../icons/CustomIcon';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+
+type Props = {
+  story: StoryType;
+  index: number;
+};
+
+export const Story = (props: Props) => {
+  const { story, index } = props;
+  const [isClicked, setIsClicked] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  return index === 0 ? (
+    <MyStory />
+  ) : (
+    <Flex
+      borderRadius={'20'}
+      minWidth='200px'
+      height='90%'
+      marginLeft={index === 0 ? 0 : 4}
+      className='story'
+      style={{ contain: 'strict' }}
+      onClick={() => {
+        if (!isClicked) {
+          setIsClicked(true);
+        }
+        if (videoRef?.current?.paused) {
+          videoRef.current?.play();
+        } else {
+          videoRef.current?.pause();
+        }
+      }}
+      position={'relative'}
+      key={`${story.profileId}-story`}
+    >
+      <ProfileIcon
+        profileIcon={story.profileIcon}
+        profileId={story.profileId}
+        key={`${story.profileId}-story-profile-icon`}
+      />
+      <Text
+        pos={'absolute'}
+        top='90%'
+        width={'full'}
+        textAlign={'center'}
+        textColor={'white'}
+        fontSize={'xl'}
+        textShadow={'0 0 3px black'}
+        fontFamily={'monospace'}
+        stroke={'black'}
+        key={`${story.profileId}-story-profile-name`}
+      >
+        {story.profileName}
+      </Text>
+      {isClicked && (
+        <video
+          ref={videoRef}
+          autoPlay
+          style={{ objectFit: 'fill', cursor: 'pointer' }}
+          key={`${story.profileId}-story-video`}
+        >
+          <source
+            src={story.videoURL}
+            type='video/mp4'
+            key={`${story.profileId}-story-video-source`}
+          />
+        </video>
+      )}
+      {!isClicked && (
+        <StoryImagePreview
+          profileId={story.profileId}
+          imageSource={story.previewImage}
+          key={`${story.profileId}-story-preview`}
+        />
+      )}
+    </Flex>
+  );
+};
+
+const MyStory = () => {
+  return (
+    <Flex
+      borderRadius={'20'}
+      minWidth='200px'
+      height='90%'
+      className='story'
+      style={{ contain: 'strict' }}
+      position={'relative'}
+      key={`${sessionStorage.getItem('userId')}-story-create`}
+      bgColor='gray.700'
+    >
+      <CustomIcon
+        icon={AiOutlinePlusCircle}
+        flexProps={{
+          position: 'absolute',
+          placeContent: 'center',
+          top: '78%',
+          width: '100%',
+          _hover: { borderRadius: 90, cursor: 'pointer' },
+        }}
+        bgColor='gray.600'
+        borderRadius={90}
+        fontSize='5xl'
+        _hover={{ color: 'lightblue' }}
+      />
+      <Text
+        top='90%'
+        pos={'absolute'}
+        width={'full'}
+        textAlign={'center'}
+        textColor={'white'}
+        fontSize={'xl'}
+        textShadow={'0 0 3px black'}
+        fontFamily={'monospace'}
+        stroke={'black'}
+        zIndex={5000}
+        marginY='1'
+      >
+        Create story
+      </Text>
+      <StoryImagePreview
+        paddingBottom='60px'
+        profileId={Number(sessionStorage.getItem('userId'))}
+        imageSource='./src/assets/badger.png'
+        key={`${sessionStorage.getItem('userId')}-story-preview`}
+        shouldZoom={false}
+      />
+    </Flex>
+  );
+};

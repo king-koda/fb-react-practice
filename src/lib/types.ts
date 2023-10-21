@@ -1,4 +1,4 @@
-export type Story = {
+export type StoryType = {
   previewImage: string;
   videoURL: string;
   profileIcon: string;
