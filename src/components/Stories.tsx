@@ -1,56 +1,86 @@
-import { Flex, HStack } from "@chakra-ui/react";
-import { stories } from "../../test-data/stories";
-import { Story } from "./Story";
-import { CustomIcon } from "./CustomIcon";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { Flex, HStack } from '@chakra-ui/react';
+import { useRef } from 'react';
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from 'react-icons/bs';
+import { stories } from '../../test-data/stories';
+import { CustomIcon } from './CustomIcon';
+import { Story } from './Story';
 
 export const Stories = () => {
+  const storiesRef = useRef<HTMLDivElement>(null);
+  const scrollDistance = 400;
   return (
-    <>
-      <CustomIcon
-        flexProps={{
-          boxSize: 20,
-          position: "absolute",
-          alignItems: "center",
-          bgColor: "black",
-          opacity: "50%",
-          height: "400px",
-        }}
-        icon={AiOutlineArrowLeft}
-        fontSize={"60px"}
-        margin={"auto"}
-        paddingRight="-2px"
-        color="white"
-        justifySelf={"flex-end"}
-      />
-      <Flex
-        direction={"row"}
-        width={"full"}
-        overflowX={"scroll"}
-        className="disable-scrollbars"
-        position="relative"
-        height="400px"
-        bgColor="yellow"
+    <HStack width={'full'} height={'400px'} position={'relative'}>
+      <HStack
+        width={'full'}
+        height='400px'
+        overflowX={'scroll'}
+        className='disable-scrollbars stories'
+        ref={storiesRef}
       >
-        {stories.map((story) => (
-          <Story story={story} />
+        {stories.map((story, index) => (
+          <Story story={story} key={index} />
         ))}
+      </HStack>
+      <Flex
+        height={'full'}
+        position='absolute'
+        alignItems={'center'}
+        marginLeft='2px'
+      >
+        <CustomIcon
+          flexProps={{
+            boxSize: 20,
+            position: 'absolute',
+            alignItems: 'center',
+            bgColor: 'black',
+            opacity: '50%',
+          }}
+          icon={BsFillArrowLeftCircleFill}
+          fontSize={'60px'}
+          margin={'auto'}
+          paddingRight='-2px'
+          color='white'
+          justifySelf={'flex-end'}
+          onClick={() => {
+            storiesRef.current?.scrollBy({
+              left: -scrollDistance,
+              behavior: 'smooth',
+            });
+          }}
+        />
       </Flex>
-      <CustomIcon
-        flexProps={{
-          boxSize: 20,
-          position: "absolute",
-          alignItems: "center",
-          bgColor: "black",
-          opacity: "50%",
-          height: "400px",
-        }}
-        icon={AiOutlineArrowRight}
-        fontSize={"60px"}
-        margin={"auto"}
-        paddingRight="-2px"
-        color="white"
-      />
-    </>
+      <Flex
+        height={'full'}
+        position='absolute'
+        alignItems={'center'}
+        left={'100%'}
+        flexDirection={'row-reverse'}
+        marginLeft='-2px'
+      >
+        <CustomIcon
+          flexProps={{
+            boxSize: 20,
+            position: 'absolute',
+            alignItems: 'center',
+            bgColor: 'black',
+            opacity: '50%',
+          }}
+          icon={BsFillArrowRightCircleFill}
+          fontSize={'60px'}
+          margin={'auto'}
+          paddingRight='-2px'
+          color='white'
+          onClick={() => {
+            storiesRef.current?.scrollBy({
+              left: scrollDistance,
+              behavior: 'smooth',
+            });
+          }}
+        />
+      </Flex>
+    </HStack>
   );
 };

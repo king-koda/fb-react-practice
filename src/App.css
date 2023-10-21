@@ -52,6 +52,10 @@
   -ms-overflow-style: none; /* IE 10+ */
 }
 
+.story {
+  user-select: none;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

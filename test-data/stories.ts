@@ -1,76 +1,72 @@
 import { Story } from '../src/lib/types';
 
+const video = true
+  ? '../src/assets/badgers.mp4'
+  : 'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff';
+
 export const stories: Story[] = [
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
     profileName: 'Badger',
     profileId: 1,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger',
     profileId: 2,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger Badger',
     profileId: 3,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger Badger Badger',
     profileId: 4,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger Badger Badger Badger',
     profileId: 5,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger Badger Badger Badger Badger',
     profileId: 6,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger Badger Badger Badger Badger Badger',
     profileId: 7,
   },
   {
-    videoURL:
-      'https://www.youtube.com/watch?v=EIyixC9NsLI&ab_channel=Weebl%27sStuff',
+    videoURL: video,
     action: 'create',
-    previewImage: '.../assets/badger.png',
-    profileIconURL: '.../assets/badger.png',
-    profileName: 'Badger',
+    previewImage: '../src/assets/badger.png',
+    profileIcon: '../src/assets/badger.png',
+    profileName: 'Badger Badger Badger Badger Badger Badger Badger Badger',
     profileId: 8,
   },
 ];

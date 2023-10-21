@@ -1,4 +1,4 @@
-import { Flex, HStack, Text, VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 import { Stories } from '../components/Stories';
 
 type Props = {

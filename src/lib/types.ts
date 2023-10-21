@@ -1,7 +1,7 @@
 export type Story = {
   previewImage: string;
   videoURL: string;
-  profileIconURL: string;
+  profileIcon: string;
   profileName: string;
   action: 'watch' | 'create';
   profileId: number;
