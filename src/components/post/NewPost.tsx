@@ -1,54 +1,54 @@
-import { Divider, Flex, Input } from '@chakra-ui/react';
-import { AiOutlineVideoCamera } from 'react-icons/ai';
-import { BsEmojiHeartEyes } from 'react-icons/bs';
-import { TfiGallery } from 'react-icons/tfi';
-import { ProfileIcon } from '../profile/ProfileIcon';
-import { NewPostButton } from './NewPostButton';
+import { Divider, Flex, Input } from "@chakra-ui/react";
+import { AiOutlineVideoCamera } from "react-icons/ai";
+import { BsEmojiHeartEyes } from "react-icons/bs";
+import { TfiGallery } from "react-icons/tfi";
+import { ProfileIcon } from "../profile/ProfileIcon";
+import { NewPostButton } from "./NewPostButton";
 
 export const NewPost = () => {
   return (
     <Flex
-      bgColor='gray.700'
-      height='200px'
-      boxShadow={'lg'}
-      width={'full'}
+      className="secondary"
+      height="200px"
+      boxShadow={"lg"}
+      width={"full"}
       borderRadius={30}
-      marginX='3'
-      direction={'column'}
+      direction={"column"}
     >
-      <Flex direction={'row'} height='50%' padding='2'>
+      <Flex direction={"row"} height="50%" padding="2">
         <ProfileIcon
-          profileIcon={'./src/assets/badger.png'}
-          profileId={Number(sessionStorage.getItem('userId'))}
-          key={`${sessionStorage.getItem('userId')}-story-profile-icon`}
+          profileIcon={"./src/assets/badger.png"}
+          profileId={Number(sessionStorage.getItem("userId"))}
+          key={`${sessionStorage.getItem("userId")}-story-profile-icon`}
           pos={undefined}
           marginTop={undefined}
           marginLeft={undefined}
-          border='1px solid gray'
+          border="1px solid gray"
         />
         <Input
-          bgColor='gray.600'
+          className="tertiary"
+          background=""
           placeholder={`What's on your mind, ${sessionStorage.getItem(
-            'firstName'
+            "firstName"
           )}?`}
           _placeholder={{
-            color: 'gray.400',
-            fontSize: 'xl',
-            fontStyle: 'italic',
-            fontFamily: 'monospace',
+            color: "gray.400",
+            fontSize: "xl",
+            fontStyle: "italic",
+            fontFamily: "monospace",
           }}
-          alignSelf='center'
+          alignSelf="center"
           borderRadius={30}
-          height='70%'
-          marginLeft='2'
-          color='white'
-          fontSize='xl'
-          fontFamily={'monospace'}
-          border='none'
+          height="70%"
+          marginLeft="2"
+          color="white"
+          fontSize="xl"
+          fontFamily={"monospace"}
+          border="none"
         />
       </Flex>
-      <Divider width={'95%'} alignSelf='center' />
-      <Flex direction={'row'} height='50%' width='100%' padding='2'>
+      <Divider width={"95%"} alignSelf="center" />
+      <Flex direction={"row"} height="50%" width="100%" padding="2">
         <NewPostButton icon={AiOutlineVideoCamera} />
         <NewPostButton icon={TfiGallery} />
         <NewPostButton icon={BsEmojiHeartEyes} />

@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-import { CustomIcon, CustomIconProps } from './CustomIcon';
-import { PageRoutes } from '../../lib/enums';
-import { PageTypes } from '../../lib/types';
+import { useNavigate } from "react-router-dom";
+import { CustomIcon, CustomIconProps } from "./CustomIcon";
+import { PageRoutes } from "../../lib/enums";
+import { PageTypes } from "../../lib/types";
 
 type Props = CustomIconProps & {
   pageType: PageTypes;
@@ -14,14 +14,13 @@ export const IconWithUnderline = ({ pageType, flexProps, ...rest }: Props) => {
     <CustomIcon
       {...rest}
       flexProps={{
-        borderBottom: isSelected ? '4px solid blue' : undefined,
+        borderBottom: isSelected ? "4px solid blue" : undefined,
         bgColor: undefined,
         borderRadius: undefined,
+        onClick: () => navigate(PageRoutes[pageType]),
         ...flexProps,
       }}
-      color={isSelected ? 'blue' : 'gray.500'}
-      marginX='3'
-      onClick={() => navigate(PageRoutes[pageType])}
+      color={isSelected ? "blue" : "gray.500"}
     ></CustomIcon>
   );
 };

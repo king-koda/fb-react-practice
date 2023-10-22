@@ -1,6 +1,7 @@
-import { VStack } from '@chakra-ui/react';
-import { Stories } from '../components/stories/Stories';
-import { NewPost } from '../components/post/NewPost';
+import { VStack } from "@chakra-ui/react";
+import { Stories } from "../components/stories/Stories";
+import { NewPost } from "../components/post/NewPost";
+import { IconType } from "react-icons";
 
 type Props = {
   title: string;
@@ -8,19 +9,19 @@ type Props = {
 
 export const Home = ({ title }: Props) => {
   //TODO: remove after done
-  sessionStorage.setItem('userId', '1');
-  sessionStorage.setItem('firstName', 'Christian');
-  sessionStorage.setItem('lastName', 'Radei');
+  sessionStorage.setItem("userId", "1");
+  sessionStorage.setItem("firstName", "Christian");
+  sessionStorage.setItem("lastName", "Radei");
+
   return (
     <>
       <VStack
-        height='full'
-        flex='auto'
-        borderX='black 2px solid'
-        marginX={['10%', '10%', '0%']}
-        width={'full'}
-        className='main'
-        padding='20px'
+        height="4000px"
+        flex="auto"
+        borderX="black 2px solid"
+        width={"full"}
+        className="main content"
+        gap={"12px !important"}
       >
         <Stories />
 
