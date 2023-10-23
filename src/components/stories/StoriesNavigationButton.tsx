@@ -27,13 +27,13 @@ export const StoriesNavigationButton = ({ icon, type, onClick }: Props) => {
           alignItems: "center",
           bgColor: "black",
           opacity: "50%",
-          onClick: () => onClick(type),
         }}
         icon={icon}
         fontSize={"60px"}
         margin={"auto"}
         paddingRight="-2px"
         color="white"
+        onClick={() => onClick(type)}
       />
     </Flex>
   );

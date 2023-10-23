@@ -1,11 +1,12 @@
 import { Flex, FlexProps, Icon, IconProps } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 
-export type CustomIconProps = IconProps & {
+export type CustomIconProps = Omit<IconProps, "onClick"> & {
   icon: IconType;
   flexProps?: FlexProps;
   underlineOnSelect?: boolean;
   isSelected?: boolean;
+  onClick?: () => void;
 };
 
 export const CustomIcon = ({
@@ -14,20 +15,22 @@ export const CustomIcon = ({
   children,
   underlineOnSelect,
   isSelected,
-  ...rest
+  onClick,
+  ...iconProps
 }: CustomIconProps) => {
   return (
     <Flex
       _hover={
-        flexProps?.onClick
+        onClick
           ? { bgColor: "gray.600", borderRadius: 90, cursor: "pointer" }
           : {}
       }
       borderRadius={"90"}
       pos="relative"
+      onClick={onClick}
       {...flexProps}
     >
-      <Icon as={icon} fontSize="4xl" color="gray.500" {...rest}></Icon>
+      <Icon as={icon} fontSize="4xl" color="gray.500" {...iconProps}></Icon>
       {children}
       {underlineOnSelect && isSelected && (
         <Flex

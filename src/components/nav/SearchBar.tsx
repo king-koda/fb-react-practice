@@ -5,11 +5,7 @@ import { CustomIcon } from "../icons/CustomIcon";
 export const SearchBar = () => {
   return (
     <Flex className="tertiary" borderRadius={30} padding="2">
-      <CustomIcon
-        icon={BiSearch}
-        fontSize={"xl"}
-        alignSelf="center"
-      ></CustomIcon>
+      <CustomIcon icon={BiSearch} fontSize={"xl"} alignSelf="center" />
       <Input
         placeholder={`Search Fakebook`}
         _placeholder={{

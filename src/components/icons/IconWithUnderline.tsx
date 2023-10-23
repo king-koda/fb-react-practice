@@ -17,7 +17,6 @@ export const IconWithUnderline = ({ pageType, flexProps, ...rest }: Props) => {
       flexProps={{
         bgColor: undefined,
         borderRadius: undefined,
-        onClick: () => navigate(PageRoutes[pageType]),
         w: "20%",
         justifyContent: "center",
         ...flexProps,
@@ -25,6 +24,7 @@ export const IconWithUnderline = ({ pageType, flexProps, ...rest }: Props) => {
       underlineOnSelect
       isSelected={isSelected}
       color={isSelected ? "blue" : "gray.500"}
+      onClick={() => navigate(PageRoutes[pageType])}
     />
   );
 };

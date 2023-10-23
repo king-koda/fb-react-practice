@@ -53,9 +53,9 @@ export const SidebarNav = () => {
             height: "30",
             borderRadius: 20,
             alignItems: "center",
-            onClick: () => {},
             className: "secondary",
           }}
+          onClick={() => {}}
         >
           <Text marginLeft="2">{item.name}</Text>
         </CustomIcon>
