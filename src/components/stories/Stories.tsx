@@ -1,12 +1,12 @@
-import { Flex, HStack } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import { forwardRef, useRef } from "react";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 import { stories } from "../../../test-data/stories";
-import { StoriesNavigationButton } from "./StoriesNavigationButton";
 import { StoryType } from "../../lib/types";
+import { StoriesNavigationButton } from "./StoriesNavigationButton";
 import { Story } from "./Story";
 
 export const Stories = () => {
@@ -52,7 +52,7 @@ const StoriesCarousel = forwardRef<HTMLDivElement, StoriesCarouselProps>(
         overflowX={"scroll"}
         className="disable-scrollbars stories"
         ref={ref}
-        borderRadius={45}
+        borderRadius={30}
         alignItems={"flex-start"}
       >
         {stories.map((story, index) => (

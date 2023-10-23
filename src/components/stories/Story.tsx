@@ -62,7 +62,7 @@ export const Story = (props: Props) => {
         <video
           ref={videoRef}
           autoPlay
-          style={{ objectFit: "fill", cursor: "pointer" }}
+          style={{ objectFit: "fill", cursor: "pointer", zIndex: -1 }}
           key={`${story.profileId}-story-video`}
         >
           <source
@@ -119,7 +119,6 @@ const MyStory = () => {
         fontFamily={"monospace"}
         stroke={"black"}
         zIndex={5000}
-        marginY="1"
       >
         Create story
       </Text>

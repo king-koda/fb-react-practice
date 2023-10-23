@@ -6,12 +6,12 @@ import { NavBar } from "../components/nav/NavBar";
 import { RightSidebar } from "../components/nav/RightSidebar";
 
 export const Layout = () => {
-  const collapseSideBars = false; //useMediaQuery({ maxWidth: 700 });
+  const collapseSideBars = useMediaQuery({ maxWidth: 750 });
 
   return (
     <>
       <NavBar></NavBar>
-      <HStack height="full">
+      <HStack height="full" justifyContent={"center"}>
         {collapseSideBars ? <></> : <LeftSidebar></LeftSidebar>}
         <Outlet></Outlet>
         {collapseSideBars ? <></> : <RightSidebar></RightSidebar>}

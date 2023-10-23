@@ -25,34 +25,33 @@ body {
   border-bottom: gray 2px solid;
   width: 100%;
   max-width: 100%;
+  justify-content: space-between;
 }
 
 .innerNav {
   justify-content: space-evenly;
   gap: 6px !important;
   width: 60%;
-  max-width: 60%;
-}
-
-.content {
+  min-width: 60%;
   padding: 10px;
 }
 
 .outerNav {
   gap: 6px !important;
-  width: 20%;
-  max-width: 20%;
+  min-width: 20%;
+  padding: 10px;
 }
 
 .sidebar {
   width: 20%;
-  max-width: 20%;
+  min-width: 20%;
   align-self: flex-start;
+  padding: 10px;
 }
 
 .main {
-  width: 60%;
-  max-width: 60%;
+  min-width: 60%;
+  padding: 10px;
 }
 
 .story,

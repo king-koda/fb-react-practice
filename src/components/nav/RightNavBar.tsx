@@ -8,13 +8,13 @@ export const RightNavBar = () => {
   return (
     <Flex
       className="outerNav"
-      justifyContent={"flex-end"}
-      borderLeft="4px solid black"
+      justifyContent={"flex-start"}
+      flexDir={"row-reverse"}
     >
-      <CustomIcon icon={AiOutlinePlus} />
-      <CustomIcon icon={AiFillMessage} />
-      <CustomIcon icon={IoMdNotifications} />
       <CustomIcon icon={SiApacherocketmq} />
+      <CustomIcon icon={IoMdNotifications} />
+      <CustomIcon icon={AiFillMessage} />
+      <CustomIcon icon={AiOutlinePlus} />
     </Flex>
   );
 };

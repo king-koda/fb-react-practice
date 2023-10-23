@@ -1,11 +1,12 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Sidebar } from "./Sidebar";
+import { SidebarNav } from "./SidebarNav";
 
 type Props = {};
 
 export const RightSidebar = ({}: Props) => {
   return (
-    <Flex className="sidebar" height="full" borderLeft="4px solid black">
-      <Text>Right</Text>
-    </Flex>
+    <Sidebar>
+      <SidebarNav />
+    </Sidebar>
   );
 };
