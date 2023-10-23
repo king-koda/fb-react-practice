@@ -30,7 +30,6 @@ body {
 
 .innerNav {
   justify-content: space-evenly;
-  gap: 6px !important;
   width: 60%;
   min-width: 60%;
   padding: 10px;
