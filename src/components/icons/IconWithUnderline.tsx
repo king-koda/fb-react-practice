@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { CustomIcon, CustomIconProps } from "./CustomIcon";
 import { PageRoutes } from "../../lib/enums";
 import { PageTypes } from "../../lib/types";
-import { Flex } from "@chakra-ui/react";
+import { CustomIcon, CustomIconProps } from "./CustomIcon";
 
 type Props = CustomIconProps & {
   pageType: PageTypes;
@@ -15,7 +14,6 @@ export const IconWithUnderline = ({ pageType, flexProps, ...rest }: Props) => {
     <CustomIcon
       flexProps={{
         bgColor: undefined,
-        borderRadius: undefined,
         w: "20%",
         justifyContent: "center",
         _hover: {

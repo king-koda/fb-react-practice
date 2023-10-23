@@ -33,6 +33,7 @@ export const CustomIcon = ({
       }
       pos="relative"
       onClick={onClick}
+      borderRadius="90px"
       {...safeFlexProps}
     >
       <Icon as={icon} fontSize="4xl" color="gray.500" {...iconProps}></Icon>
