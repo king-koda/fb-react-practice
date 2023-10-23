@@ -13,18 +13,23 @@ export const IconWithUnderline = ({ pageType, flexProps, ...rest }: Props) => {
   const isSelected = window.location.pathname === PageRoutes[pageType];
   return (
     <CustomIcon
-      {...rest}
       flexProps={{
         bgColor: undefined,
         borderRadius: undefined,
         w: "20%",
         justifyContent: "center",
+        _hover: {
+          bgColor: "gray.600",
+          cursor: "pointer",
+          borderRadius: "10",
+        },
         ...flexProps,
       }}
       underlineOnSelect
       isSelected={isSelected}
       color={isSelected ? "blue" : "gray.500"}
       onClick={() => navigate(PageRoutes[pageType])}
+      {...rest}
     />
   );
 };

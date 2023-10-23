@@ -11,24 +11,29 @@ export type CustomIconProps = Omit<IconProps, "onClick"> & {
 
 export const CustomIcon = ({
   icon,
-  flexProps,
+  flexProps = {},
   children,
   underlineOnSelect,
   isSelected,
   onClick,
   ...iconProps
 }: CustomIconProps) => {
+  const { _hover, ...safeFlexProps } = flexProps;
   return (
     <Flex
       _hover={
         onClick
-          ? { bgColor: "gray.600", borderRadius: 90, cursor: "pointer" }
+          ? {
+              bgColor: "gray.600",
+              cursor: "pointer",
+              borderRadius: "90",
+              ..._hover,
+            }
           : {}
       }
-      borderRadius={"90"}
       pos="relative"
       onClick={onClick}
-      {...flexProps}
+      {...safeFlexProps}
     >
       <Icon as={icon} fontSize="4xl" color="gray.500" {...iconProps}></Icon>
       {children}
