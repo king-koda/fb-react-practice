@@ -34,6 +34,7 @@ export const CustomIcon = ({
       pos="relative"
       onClick={onClick}
       borderRadius="90px"
+      padding="1"
       {...safeFlexProps}
     >
       <Icon as={icon} fontSize="4xl" color="gray.500" {...iconProps}></Icon>

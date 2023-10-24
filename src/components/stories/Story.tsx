@@ -99,14 +99,13 @@ const MyStory = () => {
         flexProps={{
           position: "absolute",
           placeContent: "center",
-          top: "78%",
+          top: "75%",
           width: "100%",
-          _hover: { borderRadius: 90, cursor: "pointer" },
         }}
-        bgColor="gray.600"
+        className="secondary"
+        color="white"
         borderRadius={90}
         fontSize="5xl"
-        _hover={{ color: "lightblue" }}
       />
       <Text
         top="90%"
@@ -125,7 +124,7 @@ const MyStory = () => {
       <StoryImagePreview
         paddingBottom="60px"
         profileId={Number(sessionStorage.getItem("userId"))}
-        imageSource="@/assets/badger.png"
+        imageSource="src/assets/badger.png"
         key={`${sessionStorage.getItem("userId")}-story-preview`}
         shouldZoom={false}
       />

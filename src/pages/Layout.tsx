@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import { Outlet } from "react-router-dom";
 
 export const Layout = () => {
-  const collapseSideBars = useMediaQuery({ maxWidth: 750 });
+  const collapseSideBars = useMediaQuery({ maxWidth: 1050 });
 
   return (
     <>

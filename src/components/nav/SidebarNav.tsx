@@ -41,8 +41,9 @@ export const SidebarNav = () => {
       width="full"
       overflow={"hidden"}
     >
-      {items.map((item) => (
+      {items.map((item, index) => (
         <CustomIcon
+          key={index + "sidebar-nav-button"}
           icon={item.icon}
           fontSize={"xl"}
           flexProps={{
@@ -51,13 +52,17 @@ export const SidebarNav = () => {
             direction: "row",
             width: "full",
             height: "30",
-            borderRadius: 20,
+            borderRadius: 10,
+            bgColor: "none",
             alignItems: "center",
-            className: "secondary",
+            // className: "secondary",
+            _hover: { borderRadius: 10 },
           }}
           onClick={() => {}}
         >
-          <Text marginLeft="2">{item.name}</Text>
+          <Text marginLeft="2" color="white">
+            {item.name}
+          </Text>
         </CustomIcon>
       ))}
     </Flex>

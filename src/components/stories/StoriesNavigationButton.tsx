@@ -26,7 +26,7 @@ export const StoriesNavigationButton = ({ icon, type, onClick }: Props) => {
           position: "absolute",
           alignItems: "center",
           bgColor: "black",
-          opacity: "50%",
+          opacity: "70%",
         }}
         icon={icon}
         fontSize={"60px"}

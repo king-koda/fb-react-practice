@@ -1,8 +1,8 @@
-import { Flex } from "@chakra-ui/react";
-import { FaUserCog } from "react-icons/fa";
-import { AiFillMessage, AiOutlinePlus } from "react-icons/ai";
-import { IoMdNotifications } from "react-icons/io";
 import { CustomIcon } from "@/components/icons/CustomIcon";
+import { Flex } from "@chakra-ui/react";
+import { AiFillMessage, AiFillPlusCircle } from "react-icons/ai";
+import { FaUserCog } from "react-icons/fa";
+import { IoMdNotifications } from "react-icons/io";
 
 export const RightNavBar = () => {
   return (
@@ -14,7 +14,7 @@ export const RightNavBar = () => {
       <CustomIcon icon={FaUserCog} onClick={() => {}} />
       <CustomIcon icon={IoMdNotifications} onClick={() => {}} />
       <CustomIcon icon={AiFillMessage} onClick={() => {}} />
-      <CustomIcon icon={AiOutlinePlus} onClick={() => {}} />
+      <CustomIcon icon={AiFillPlusCircle} onClick={() => {}} />
     </Flex>
   );
 };

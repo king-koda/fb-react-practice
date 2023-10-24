@@ -9,21 +9,23 @@ export const NewPost = () => {
   return (
     <Flex
       className="secondary"
-      height="200px"
+      height="150px"
       boxShadow={"lg"}
       width={"full"}
       borderRadius={30}
       direction={"column"}
     >
-      <Flex direction={"row"} height="50%" padding="2">
+      <Flex direction={"row"} height="50%" padding="10px">
         <ProfileIcon
-          profileIcon={"@/assets/badger.png"}
+          profileIcon={"src/assets/badger.png"}
           profileId={Number(sessionStorage.getItem("userId"))}
           key={`${sessionStorage.getItem("userId")}-story-profile-icon`}
           pos={undefined}
           marginTop={undefined}
           marginLeft={undefined}
-          border="1px solid gray"
+          border="none"
+          boxSize={12}
+          placeSelf={"center"}
         />
         <Input
           className="tertiary"
@@ -34,12 +36,11 @@ export const NewPost = () => {
           _placeholder={{
             color: "gray.400",
             fontSize: "xl",
-            fontStyle: "italic",
             fontFamily: "monospace",
           }}
           alignSelf="center"
-          borderRadius={30}
-          height="70%"
+          borderRadius={20}
+          height="80%"
           marginLeft="2"
           color="white"
           fontSize="xl"
@@ -48,10 +49,10 @@ export const NewPost = () => {
         />
       </Flex>
       <Divider width={"95%"} alignSelf="center" />
-      <Flex direction={"row"} height="50%" width="100%" padding="2">
-        <NewPostButton icon={AiOutlineVideoCamera} />
-        <NewPostButton icon={TfiGallery} />
-        <NewPostButton icon={BsEmojiHeartEyes} />
+      <Flex direction={"row"} height="50%" width="100%" padding="10px">
+        <NewPostButton icon={AiOutlineVideoCamera} onClick={() => {}} />
+        <NewPostButton icon={TfiGallery} onClick={() => {}} />
+        <NewPostButton icon={BsEmojiHeartEyes} onClick={() => {}} />
       </Flex>
     </Flex>
   );
