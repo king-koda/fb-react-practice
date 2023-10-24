@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import { IconType } from "react-icons";
-import { CustomIcon } from "../icons/CustomIcon";
+import { CustomIcon } from "@/components/icons/CustomIcon";
 
 type StoryDirection = "forward" | "backward";
 

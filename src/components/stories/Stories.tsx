@@ -4,10 +4,10 @@ import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-import { stories } from "../../../test-data/stories";
-import { StoryType } from "../../lib/types";
-import { StoriesNavigationButton } from "./StoriesNavigationButton";
-import { Story } from "./Story";
+import { stories } from "test-data/stories";
+import { StoryType } from "@/lib/types";
+import { StoriesNavigationButton } from "@/components/stories/StoriesNavigationButton";
+import { Story } from "@/components/stories/Story";
 
 export const Stories = () => {
   const storiesRef = useRef<HTMLDivElement>(null);

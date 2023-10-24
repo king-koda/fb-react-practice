@@ -1,6 +1,6 @@
+import { NewPost } from "@/components/post/NewPost";
+import { Stories } from "@/components/stories/Stories";
 import { VStack } from "@chakra-ui/react";
-import { NewPost } from "../components/post/NewPost";
-import { Stories } from "../components/stories/Stories";
 
 type Props = {
   title: string;

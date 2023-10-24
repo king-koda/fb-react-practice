@@ -1,8 +1,8 @@
+import { LeftNavBar } from "@/components/nav/LeftNavBar";
+import { MidNavBar } from "@/components/nav/MidNavBar";
+import { RightNavBar } from "@/components/nav/RightNavBar";
 import { HStack } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
-import { LeftNavBar } from "./LeftNavBar";
-import { MidNavBar } from "./MidNavBar";
-import { RightNavBar } from "./RightNavBar";
 
 export const NavBar = () => {
   const showFullNav = useMediaQuery({ minWidth: 700 });

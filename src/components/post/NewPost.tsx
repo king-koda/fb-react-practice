@@ -1,9 +1,9 @@
+import { NewPostButton } from "@/components/post/NewPostButton";
+import { ProfileIcon } from "@/components/profile/ProfileIcon";
 import { Divider, Flex, Input } from "@chakra-ui/react";
 import { AiOutlineVideoCamera } from "react-icons/ai";
 import { BsEmojiHeartEyes } from "react-icons/bs";
 import { TfiGallery } from "react-icons/tfi";
-import { ProfileIcon } from "../profile/ProfileIcon";
-import { NewPostButton } from "./NewPostButton";
 
 export const NewPost = () => {
   return (
@@ -17,7 +17,7 @@ export const NewPost = () => {
     >
       <Flex direction={"row"} height="50%" padding="2">
         <ProfileIcon
-          profileIcon={"./src/assets/badger.png"}
+          profileIcon={"@/assets/badger.png"}
           profileId={Number(sessionStorage.getItem("userId"))}
           key={`${sessionStorage.getItem("userId")}-story-profile-icon`}
           pos={undefined}

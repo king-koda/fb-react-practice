@@ -1,5 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { CustomIcon } from "../icons/CustomIcon";
+import { CustomIcon } from "@/components/icons/CustomIcon";
 import { BsFillHouseFill } from "react-icons/bs";
 import { IconType } from "react-icons";
 

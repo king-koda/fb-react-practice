@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import { FaUserCog } from "react-icons/fa";
 import { AiFillMessage, AiOutlinePlus } from "react-icons/ai";
 import { IoMdNotifications } from "react-icons/io";
-import { CustomIcon } from "../icons/CustomIcon";
+import { CustomIcon } from "@/components/icons/CustomIcon";
 
 export const RightNavBar = () => {
   return (

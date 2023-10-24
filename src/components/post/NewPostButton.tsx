@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import { CustomIcon, CustomIconProps } from "../icons/CustomIcon";
+import { CustomIcon, CustomIconProps } from "@/components/icons/CustomIcon";
 
 export const NewPostButton = (props: CustomIconProps) => {
   return (

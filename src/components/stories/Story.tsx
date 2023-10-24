@@ -1,10 +1,10 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import { StoryType } from "../../lib/types";
-import { ProfileIcon } from "../profile/ProfileIcon";
-import { StoryImagePreview } from "./StoryImagePreview";
-import { CustomIcon } from "../icons/CustomIcon";
+import { StoryType } from "@/lib/types";
+import { CustomIcon } from "@/components/icons/CustomIcon";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import { ProfileIcon } from "@/components/profile/ProfileIcon";
+import { StoryImagePreview } from "@/components/stories/StoryImagePreview";
 
 type Props = {
   story: StoryType;
@@ -125,7 +125,7 @@ const MyStory = () => {
       <StoryImagePreview
         paddingBottom="60px"
         profileId={Number(sessionStorage.getItem("userId"))}
-        imageSource="./src/assets/badger.png"
+        imageSource="@/assets/badger.png"
         key={`${sessionStorage.getItem("userId")}-story-preview`}
         shouldZoom={false}
       />
