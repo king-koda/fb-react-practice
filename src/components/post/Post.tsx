@@ -73,7 +73,8 @@ export const Post = () => {
                       alignItems: 'center',
                     }}
                     marginTop='1px'
-                  ></CustomIcon>
+                    tooltipProps={{ label: 'Public' }}
+                  />
                 </Flex>
               </Flex>
             </Flex>
@@ -82,11 +83,13 @@ export const Post = () => {
                 icon={GoKebabHorizontal}
                 fontSize={'3xl'}
                 onClick={() => {}}
+                tooltipProps={{ label: 'Actions' }}
               ></ButtonIcon>
               <ButtonIcon
                 icon={RxCross2}
                 fontSize={'3xl'}
                 onClick={() => {}}
+                tooltipProps={{ label: 'Hide' }}
               ></ButtonIcon>
             </Flex>
           </Flex>
@@ -108,9 +111,19 @@ export const Post = () => {
           justifyContent={'space-between'}
           width={'100%'}
         >
-          <Flex alignItems={'center'}>
-            <CustomIcon icon={BiWorld} fontSize={'md'}></CustomIcon>
-            <CustomIcon icon={BiWorld} fontSize={'md'}></CustomIcon>
+          <Flex alignItems={'center'} gap='4px !important'>
+            <Flex>
+              <CustomIcon
+                icon={BiWorld}
+                fontSize={'md'}
+                tooltipProps={{ label: 'TopEmoji1' }}
+              />
+              <CustomIcon
+                icon={BiWorld}
+                fontSize={'md'}
+                tooltipProps={{ label: 'TopEmoji2' }}
+              />
+            </Flex>
             <Text fontSize={'12'} className='content-text'>
               20K
             </Text>
@@ -121,12 +134,14 @@ export const Post = () => {
               icon={MdOutlineModeComment}
               fontSize={'md'}
               onClick={() => {}}
+              tooltipProps={{ label: 'Comment' }}
             ></ButtonIcon>
             <Text></Text>
             <ButtonIcon
               icon={BiShare}
               fontSize={'md'}
               onClick={() => {}}
+              tooltipProps={{ label: 'Share' }}
             ></ButtonIcon>
           </Flex>
         </Flex>
