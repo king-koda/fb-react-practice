@@ -1,12 +1,12 @@
-import { Flex, Text } from "@chakra-ui/react";
-import { CustomIcon } from "@/components/icons/CustomIcon";
-import { BsFillHouseFill } from "react-icons/bs";
-import { IconType } from "react-icons";
+import { Flex, Text } from '@chakra-ui/react';
+import { BsFillHouseFill } from 'react-icons/bs';
+import { IconType } from 'react-icons';
+import { ButtonIcon } from '../icons/ButtonIcon';
 
 export const SidebarNav = () => {
   const items: { name: string; icon: IconType; onClick?: () => void }[] = [
     {
-      name: `${sessionStorage.getItem("firstName")}`,
+      name: `${sessionStorage.getItem('firstName')}`,
       icon: BsFillHouseFill,
     },
     {
@@ -36,34 +36,34 @@ export const SidebarNav = () => {
   ];
   return (
     <Flex
-      direction={"column"}
-      gap={"12px !important"}
-      width="full"
-      overflow={"hidden"}
+      direction={'column'}
+      gap={'12px !important'}
+      width='full'
+      overflow={'hidden'}
     >
       {items.map((item, index) => (
-        <CustomIcon
-          key={index + "sidebar-nav-button"}
+        <ButtonIcon
+          key={index + 'sidebar-nav-button'}
           icon={item.icon}
-          fontSize={"xl"}
+          fontSize={'xl'}
           flexProps={{
-            paddingX: "3",
-            paddingY: "6",
-            direction: "row",
-            width: "full",
-            height: "30",
+            paddingX: '3',
+            paddingY: '6',
+            direction: 'row',
+            width: 'full',
+            height: '30',
             borderRadius: 10,
-            bgColor: "none",
-            alignItems: "center",
+            bgColor: 'none',
+            alignItems: 'center',
             // className: "secondary",
             _hover: { borderRadius: 10 },
           }}
           onClick={() => {}}
         >
-          <Text marginLeft="2" color="white">
+          <Text marginLeft='2' color='white'>
             {item.name}
           </Text>
-        </CustomIcon>
+        </ButtonIcon>
       ))}
     </Flex>
   );

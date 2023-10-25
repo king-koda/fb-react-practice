@@ -1,10 +1,10 @@
-import { Flex } from "@chakra-ui/react";
-import { CustomIcon, CustomIconProps } from "@/components/icons/CustomIcon";
+import { Flex } from '@chakra-ui/react';
+import { ButtonIcon, ButtonIconProps } from '../icons/ButtonIcon';
 
-export const NewPostButton = (props: CustomIconProps) => {
+export const NewPostButton = (props: ButtonIconProps) => {
   return (
-    <Flex width="33.33%" justifyContent={"center"}>
-      <CustomIcon flexProps={{ alignSelf: "center", padding: 2 }} {...props} />
+    <Flex width='33.33%' justifyContent={'center'}>
+      <ButtonIcon flexProps={{ alignSelf: 'center', padding: 2 }} {...props} />
     </Flex>
   );
 };

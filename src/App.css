@@ -41,6 +41,10 @@ body {
   padding: 10px;
 }
 
+.content-text {
+  color: white;
+}
+
 .sidebar {
   width: 25%;
   min-width: 25%;
@@ -53,10 +57,13 @@ body {
   padding: 10px;
 }
 
-.story,
-.profile-icon {
+.story {
   user-select: none;
   cursor: pointer;
+}
+
+.profile-icon {
+  user-select: none;
 }
 
 .story:hover {

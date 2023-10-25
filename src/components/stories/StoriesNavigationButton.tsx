@@ -1,8 +1,8 @@
-import { Flex } from "@chakra-ui/react";
-import { IconType } from "react-icons";
-import { CustomIcon } from "@/components/icons/CustomIcon";
+import { Flex } from '@chakra-ui/react';
+import { IconType } from 'react-icons';
+import { ButtonIcon } from '../icons/ButtonIcon';
 
-type StoryDirection = "forward" | "backward";
+type StoryDirection = 'forward' | 'backward';
 
 type Props = {
   icon: IconType;
@@ -13,26 +13,27 @@ type Props = {
 export const StoriesNavigationButton = ({ icon, type, onClick }: Props) => {
   return (
     <Flex
-      height={"full"}
-      position="absolute"
-      alignItems={"center"}
-      left={type === "forward" ? "100%" : undefined}
-      flexDirection={type === "forward" ? "row-reverse" : undefined}
-      marginLeft={type === "forward" ? "-2px" : "2px"}
+      height={'full'}
+      position='absolute'
+      alignItems={'center'}
+      left={type === 'forward' ? '100%' : undefined}
+      flexDirection={type === 'forward' ? 'row-reverse' : undefined}
+      marginLeft={type === 'forward' ? '-2px' : '2px'}
     >
-      <CustomIcon
+      <ButtonIcon
         flexProps={{
           boxSize: 20,
-          position: "absolute",
-          alignItems: "center",
-          bgColor: "black",
-          opacity: "70%",
+          position: 'absolute',
+          alignItems: 'center',
+          bgColor: 'black',
+          opacity: '70%',
+          borderRadius: 90,
         }}
         icon={icon}
-        fontSize={"60px"}
-        margin={"auto"}
-        paddingRight="-2px"
-        color="white"
+        fontSize={'60px'}
+        margin={'auto'}
+        paddingRight='-2px'
+        color='white'
         onClick={() => onClick(type)}
       />
     </Flex>

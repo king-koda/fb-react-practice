@@ -1,4 +1,4 @@
-import { Flex, FlexProps, Image, ImageProps } from "@chakra-ui/react";
+import { Flex, FlexProps, Image, ImageProps } from '@chakra-ui/react';
 
 type Props = FlexProps & {
   profileId: number;
@@ -14,15 +14,15 @@ export const ProfileIcon = ({
 }: Props) => {
   return (
     <Flex
-      pos={"absolute"}
+      pos={'absolute'}
       boxSize={20}
       borderRadius={45}
-      style={{ contain: "strict" }}
+      style={{ contain: 'strict' }}
       marginLeft={2}
       marginTop={2}
-      border="dodgerblue 4px solid"
+      border='dodgerblue 4px solid'
       key={`${profileId}-story-profile-icon-flex`}
-      className="profile-icon"
+      className='profile-icon'
       {...rest}
     >
       <Image

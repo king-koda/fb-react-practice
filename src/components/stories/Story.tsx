@@ -1,10 +1,10 @@
-import { Flex, Text } from "@chakra-ui/react";
-import { useRef, useState } from "react";
-import { StoryType } from "@/lib/types";
-import { CustomIcon } from "@/components/icons/CustomIcon";
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import { ProfileIcon } from "@/components/profile/ProfileIcon";
-import { StoryImagePreview } from "@/components/stories/StoryImagePreview";
+import { Flex, Text } from '@chakra-ui/react';
+import { useRef, useState } from 'react';
+import { StoryType } from '@/lib/types';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { ProfileIcon } from '@/components/profile/ProfileIcon';
+import { StoryImagePreview } from '@/components/stories/StoryImagePreview';
+import { ButtonIcon } from '../icons/ButtonIcon';
 
 type Props = {
   story: StoryType;
@@ -20,12 +20,12 @@ export const Story = (props: Props) => {
     <MyStory />
   ) : (
     <Flex
-      borderRadius={"20"}
-      minWidth="200px"
-      height="full"
+      borderRadius={'20'}
+      minWidth='200px'
+      height='full'
       marginLeft={index === 0 ? 0 : 4}
-      className="story"
-      style={{ contain: "strict" }}
+      className='story'
+      style={{ contain: 'strict' }}
       onClick={() => {
         if (!isClicked) {
           setIsClicked(true);
@@ -36,7 +36,7 @@ export const Story = (props: Props) => {
           videoRef.current?.pause();
         }
       }}
-      position={"relative"}
+      position={'relative'}
       key={`${story.profileId}-story`}
     >
       <ProfileIcon
@@ -45,15 +45,15 @@ export const Story = (props: Props) => {
         key={`${story.profileId}-story-profile-icon`}
       />
       <Text
-        pos={"absolute"}
-        top="90%"
-        width={"full"}
-        textAlign={"center"}
-        textColor={"white"}
-        fontSize={"xl"}
-        textShadow={"0 0 3px black"}
-        fontFamily={"monospace"}
-        stroke={"black"}
+        pos={'absolute'}
+        top='90%'
+        width={'full'}
+        textAlign={'center'}
+        textColor={'white'}
+        fontSize={'xl'}
+        textShadow={'0 0 3px black'}
+        fontFamily={'monospace'}
+        stroke={'black'}
         key={`${story.profileId}-story-profile-name`}
       >
         {story.profileName}
@@ -62,12 +62,12 @@ export const Story = (props: Props) => {
         <video
           ref={videoRef}
           autoPlay
-          style={{ objectFit: "fill", cursor: "pointer", zIndex: -1 }}
+          style={{ objectFit: 'fill', cursor: 'pointer', zIndex: -1 }}
           key={`${story.profileId}-story-video`}
         >
           <source
             src={story.videoURL}
-            type="video/mp4"
+            type='video/mp4'
             key={`${story.profileId}-story-video-source`}
           />
         </video>
@@ -86,46 +86,46 @@ export const Story = (props: Props) => {
 const MyStory = () => {
   return (
     <Flex
-      borderRadius={"20"}
-      minWidth="200px"
-      height="100%"
-      className="story secondary"
-      style={{ contain: "strict" }}
-      position={"relative"}
-      key={`${sessionStorage.getItem("userId")}-story-create`}
+      borderRadius={'20'}
+      minWidth='200px'
+      height='100%'
+      className='story secondary'
+      style={{ contain: 'strict' }}
+      position={'relative'}
+      key={`${sessionStorage.getItem('userId')}-story-create`}
     >
-      <CustomIcon
+      <ButtonIcon
         icon={AiOutlinePlusCircle}
         flexProps={{
-          position: "absolute",
-          placeContent: "center",
-          top: "75%",
-          width: "100%",
+          position: 'absolute',
+          placeContent: 'center',
+          top: '75%',
+          width: '100%',
         }}
-        className="secondary"
-        color="white"
+        className='secondary'
+        color='white'
         borderRadius={90}
-        fontSize="5xl"
+        fontSize='5xl'
       />
       <Text
-        top="90%"
-        pos={"absolute"}
-        width={"full"}
-        textAlign={"center"}
-        textColor={"white"}
-        fontSize={"xl"}
-        textShadow={"0 0 3px black"}
-        fontFamily={"monospace"}
-        stroke={"black"}
+        top='90%'
+        pos={'absolute'}
+        width={'full'}
+        textAlign={'center'}
+        textColor={'white'}
+        fontSize={'xl'}
+        textShadow={'0 0 3px black'}
+        fontFamily={'monospace'}
+        stroke={'black'}
         zIndex={5000}
       >
         Create story
       </Text>
       <StoryImagePreview
-        paddingBottom="60px"
-        profileId={Number(sessionStorage.getItem("userId"))}
-        imageSource="src/assets/badger.png"
-        key={`${sessionStorage.getItem("userId")}-story-preview`}
+        paddingBottom='60px'
+        profileId={Number(sessionStorage.getItem('userId'))}
+        imageSource='src/assets/badger.png'
+        key={`${sessionStorage.getItem('userId')}-story-preview`}
         shouldZoom={false}
       />
     </Flex>
