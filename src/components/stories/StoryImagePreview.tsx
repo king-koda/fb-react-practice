@@ -1,4 +1,4 @@
-import { Image, ImageProps } from "@chakra-ui/react";
+import { Image, ImageProps } from '@chakra-ui/react';
 
 type Props = ImageProps & {
   profileId: number;
@@ -17,10 +17,10 @@ export const StoryImagePreview = ({
       src={imageSource}
       key={`${profileId}-story-preview`}
       _hover={{
-        transform: !shouldZoom ? undefined : "scale(1.02)",
-        cursor: "pointer",
+        transform: !shouldZoom ? undefined : 'scale(1.02)',
+        cursor: 'pointer',
       }}
-      overflow={"visible"}
+      overflow={'visible'}
       zIndex={-1}
       {...rest}
     />

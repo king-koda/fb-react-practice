@@ -1,12 +1,7 @@
-import {
-  Flex,
-  FlexProps,
-  Icon,
-  IconProps,
-  TooltipProps,
-} from '@chakra-ui/react';
+import { Flex, FlexProps, IconProps, TooltipProps } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 import { TooltipWrapper } from '../tooltip/TooltipWrapper';
+import { BaseIcon } from './BaseIcon';
 
 export type ButtonIconProps = Omit<IconProps, 'onClick'> & {
   icon: IconType;
@@ -48,7 +43,7 @@ export const ButtonIcon = ({
         {...safeFlexProps}
       >
         <Flex gap='4px !important'>
-          <Icon as={icon} fontSize='4xl' color='gray.500' {...iconProps}></Icon>
+          <BaseIcon icon={icon} {...iconProps}></BaseIcon>
           {children}
         </Flex>
         {underlineOnSelect && isSelected && (

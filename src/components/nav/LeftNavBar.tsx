@@ -1,12 +1,12 @@
 import { SearchBar } from '@/components/nav/SearchBar';
 import { Flex } from '@chakra-ui/react';
-import { BsFacebook } from 'react-icons/bs';
 import { ButtonIcon } from '../icons/ButtonIcon';
+import { Facebook } from '../icons/Facebook';
 
 export const LeftNavBar = () => {
   return (
     <Flex className='outerNav'>
-      <ButtonIcon icon={BsFacebook} onClick={() => {}} />
+      <ButtonIcon Icon={Facebook} onClick={() => {}} />
       <SearchBar />
     </Flex>
   );

@@ -1,14 +1,13 @@
 import { Divider, Flex, Image, Text } from '@chakra-ui/react';
-import { ProfileIcon } from '../profile/ProfileIcon';
 import { BiWorld } from 'react-icons/bi';
-import { RxCross2 } from 'react-icons/rx';
-import { GoKebabHorizontal } from 'react-icons/go';
 import { FiThumbsUp } from 'react-icons/fi';
-
-import { MdOutlineModeComment } from 'react-icons/md';
-import { BiShare } from 'react-icons/bi';
+import { GoKebabHorizontal } from 'react-icons/go';
+import { RxCross2 } from 'react-icons/rx';
 import { ButtonIcon } from '../icons/ButtonIcon';
 import { CustomIcon } from '../icons/CustomIcon';
+import { ProfileIcon } from '../profile/ProfileIcon';
+import { BiShare } from 'react-icons/bi';
+import { MdOutlineModeComment } from 'react-icons/md';
 
 export const Post = () => {
   return (

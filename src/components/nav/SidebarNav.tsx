@@ -1,6 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
-import { BsFillHouseFill } from 'react-icons/bs';
 import { IconType } from 'react-icons';
+import { BsFillHouseFill } from 'react-icons/bs';
 import { ButtonIcon } from '../icons/ButtonIcon';
 
 export const SidebarNav = () => {
@@ -55,7 +55,7 @@ export const SidebarNav = () => {
             borderRadius: 10,
             bgColor: 'none',
             alignItems: 'center',
-            // className: "secondary",
+            className: 'secondary',
             _hover: { borderRadius: 10 },
           }}
           onClick={() => {}}

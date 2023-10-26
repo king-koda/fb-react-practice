@@ -1,5 +1,5 @@
-import { Sidebar } from "@/components/nav/Sidebar";
-import { SidebarNav } from "@/components/nav/SidebarNav";
+import { Sidebar } from '@/components/nav/Sidebar';
+import { SidebarNav } from '@/components/nav/SidebarNav';
 
 type Props = {};
 
