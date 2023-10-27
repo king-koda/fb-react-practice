@@ -4,7 +4,7 @@ import { StoryType } from '@/lib/types';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { ProfileIcon } from '@/components/profile/ProfileIcon';
 import { StoryImagePreview } from '@/components/stories/StoryImagePreview';
-import { ButtonIcon } from '../icons/ButtonIcon';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
 
 type Props = {
   story: StoryType;

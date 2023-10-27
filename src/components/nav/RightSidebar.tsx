@@ -1,9 +1,9 @@
+import { Contacts } from '@/components/chat/Contacts';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
 import { Sidebar } from '@/components/nav/Sidebar';
-import { SidebarNav } from '@/components/nav/SidebarNav';
 import { Flex, Text } from '@chakra-ui/react';
-import { ButtonIcon } from '../icons/ButtonIcon';
-import { Kebab } from '../icons/Kebab';
-import { Search } from '../icons/Search';
+import { BiSearch } from 'react-icons/bi';
+import { GoKebabHorizontal } from 'react-icons/go';
 
 type Props = {};
 
@@ -11,26 +11,22 @@ export const RightSidebar = ({}: Props) => {
   return (
     <Sidebar>
       <Flex flexDir={'column'} width='full'>
-        <Flex
-          flexDir={'row'}
-          justifyContent={'space-between'}
-          alignItems={'center'}
-        >
+        <Flex flexDir={'row'} justifyContent={'space-between'} marginTop='-6px'>
           <Text className={'content-text'}>Contacts</Text>
-          <Flex>
+          <Flex gap='6px !important'>
             <ButtonIcon
               fontSize={'2xl'}
-              Icon={Search}
+              icon={BiSearch}
               onClick={() => {}}
             ></ButtonIcon>
             <ButtonIcon
               fontSize={'2xl'}
-              Icon={Kebab}
+              icon={GoKebabHorizontal}
               onClick={() => {}}
             ></ButtonIcon>
           </Flex>
         </Flex>
-        <SidebarNav />
+        <Contacts />
       </Flex>
     </Sidebar>
   );

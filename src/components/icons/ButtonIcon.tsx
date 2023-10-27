@@ -1,7 +1,7 @@
 import { Flex, FlexProps, IconProps, TooltipProps } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
-import { TooltipWrapper } from '../tooltip/TooltipWrapper';
-import { BaseIcon } from './BaseIcon';
+import { TooltipWrapper } from '@/components/tooltip/TooltipWrapper';
+import { BaseIcon } from '@/components/icons/BaseIcon';
 
 export type ButtonIconProps = Omit<IconProps, 'onClick'> & {
   icon: IconType;

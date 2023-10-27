@@ -1,7 +1,7 @@
 import { Flex, Text } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 import { BsFillHouseFill } from 'react-icons/bs';
-import { ButtonIcon } from '../icons/ButtonIcon';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
 
 export const SidebarNav = () => {
   const items: { name: string; icon: IconType; onClick?: () => void }[] = [
@@ -35,12 +35,7 @@ export const SidebarNav = () => {
     },
   ];
   return (
-    <Flex
-      direction={'column'}
-      gap={'12px !important'}
-      width='full'
-      overflow={'hidden'}
-    >
+    <Flex direction={'column'} width='full' overflow={'hidden'}>
       {items.map((item, index) => (
         <ButtonIcon
           key={index + 'sidebar-nav-button'}
@@ -55,10 +50,10 @@ export const SidebarNav = () => {
             borderRadius: 10,
             bgColor: 'none',
             alignItems: 'center',
-            className: 'secondary',
             _hover: { borderRadius: 10 },
           }}
           onClick={() => {}}
+          marginTop='2px'
         >
           <Text marginLeft='2' color='white'>
             {item.name}

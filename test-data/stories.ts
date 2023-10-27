@@ -70,3 +70,26 @@ export const stories: StoryType[] = [
     profileId: 8,
   },
 ];
+
+export const users = [
+  'Marilyn Gilbert',
+  'Essence Serrano',
+  'Kaylen Orozco',
+  'Katie Wolf',
+  'Kellen Russo',
+  'Brynlee Dudley',
+  'Gilbert Goodman',
+  'Maddison Hughes',
+  'Braxton Ochoa',
+  'Teagan Pennington',
+  'Lana Rangel',
+  'Asa Wiley',
+  'Crystal Pittman',
+  'Rey Conley',
+  'Ella Sims',
+  'Helen Gregory',
+  'Irene Price',
+  'Josiah Benton',
+  'Laura Whitney',
+  'Abril Page',
+];

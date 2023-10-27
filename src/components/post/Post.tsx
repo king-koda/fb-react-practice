@@ -3,9 +3,9 @@ import { BiWorld } from 'react-icons/bi';
 import { FiThumbsUp } from 'react-icons/fi';
 import { GoKebabHorizontal } from 'react-icons/go';
 import { RxCross2 } from 'react-icons/rx';
-import { ButtonIcon } from '../icons/ButtonIcon';
-import { CustomIcon } from '../icons/CustomIcon';
-import { ProfileIcon } from '../profile/ProfileIcon';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
+import { CustomIcon } from '@/components/icons/CustomIcon';
+import { ProfileIcon } from '@/components/profile/ProfileIcon';
 import { BiShare } from 'react-icons/bi';
 import { MdOutlineModeComment } from 'react-icons/md';
 

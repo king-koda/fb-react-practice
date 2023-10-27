@@ -1,7 +1,7 @@
 import { Flex, Input } from '@chakra-ui/react';
 import { useRef } from 'react';
 import { BiSearch } from 'react-icons/bi';
-import { ButtonIcon } from '../icons/ButtonIcon';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
 
 export const SearchBar = () => {
   const ref = useRef<HTMLDivElement>(null);

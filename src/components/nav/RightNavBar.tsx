@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import { AiFillMessage, AiFillPlusCircle } from 'react-icons/ai';
 import { FaUserCog } from 'react-icons/fa';
 import { IoMdNotifications } from 'react-icons/io';
-import { ButtonIcon } from '../icons/ButtonIcon';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
 
 export const RightNavBar = () => {
   return (

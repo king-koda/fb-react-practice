@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
-import { ButtonIcon } from '../icons/ButtonIcon';
+import { ButtonIcon } from '@/components/icons/ButtonIcon';
 
 type StoryDirection = 'forward' | 'backward';
 

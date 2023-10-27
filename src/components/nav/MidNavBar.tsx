@@ -1,4 +1,4 @@
-import { IconWithUnderline } from '@/components/icons/IconWithUnderline';
+import { ButtonIconWithUnderline } from '@/components/icons/ButtonIconWithUnderline';
 import { Flex } from '@chakra-ui/react';
 import { BsFillHouseFill, BsFillPeopleFill } from 'react-icons/bs';
 import { FaShop } from 'react-icons/fa6';
@@ -8,11 +8,31 @@ import { IoPeopleCircleOutline } from 'react-icons/io5';
 export const MidNavBar = () => {
   return (
     <Flex className='innerNav'>
-      <IconWithUnderline icon={BsFillHouseFill} pageType={'HOME'} />
-      <IconWithUnderline icon={BsFillPeopleFill} pageType={'FRIENDS'} />
-      <IconWithUnderline icon={ImPlay} pageType={'VIDEOS'} />
-      <IconWithUnderline icon={FaShop} pageType={'MARKETPLACE'} />
-      <IconWithUnderline icon={IoPeopleCircleOutline} pageType={'GROUPS'} />
+      <ButtonIconWithUnderline
+        icon={BsFillHouseFill}
+        pageType={'HOME'}
+        tooltipProps={{ label: 'Home' }}
+      />
+      <ButtonIconWithUnderline
+        icon={BsFillPeopleFill}
+        pageType={'FRIENDS'}
+        tooltipProps={{ label: 'Friends' }}
+      />
+      <ButtonIconWithUnderline
+        icon={ImPlay}
+        pageType={'VIDEOS'}
+        tooltipProps={{ label: 'Videos' }}
+      />
+      <ButtonIconWithUnderline
+        icon={FaShop}
+        pageType={'MARKETPLACE'}
+        tooltipProps={{ label: 'Marketplace' }}
+      />
+      <ButtonIconWithUnderline
+        icon={IoPeopleCircleOutline}
+        pageType={'GROUPS'}
+        tooltipProps={{ label: 'Groups' }}
+      />
     </Flex>
   );
 };

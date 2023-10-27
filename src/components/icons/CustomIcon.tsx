@@ -6,7 +6,7 @@ import {
   TooltipProps,
 } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
-import { TooltipWrapper } from '../tooltip/TooltipWrapper';
+import { TooltipWrapper } from '@/components/tooltip/TooltipWrapper';
 
 export type CustomIconProps = Omit<IconProps, 'onClick'> & {
   icon: IconType;
